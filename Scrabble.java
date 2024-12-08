@@ -104,7 +104,8 @@ public class Scrabble {
 					System.out.println(input + " earned " + wordScore(input) + " points. Score: " + score + " points");
 					System.out.println("");
 				}
-				else if ((isWordInDictionary(input)) && (MyString.subsetOf(input, hand) == false)) {
+				//// else if ((isWordInDictionary(input)) && (MyString.subsetOf(input, hand) == false)) {
+				else if (!MyString.subsetOf(input, hand)) {
 					System.out.println("Invalid word. Try again.");
 					System.out.println("");
 				}		
